@@ -1,9 +1,11 @@
 #include <stdio.h>
 
-int findDigitalRoot(number)
+int findDigitalRoot(int number)
 {
 	while(number >= 10)
+	{
 		number = number % 10 + findDigitalRoot(number / 10);
+	}
 	return number;
 }
 
